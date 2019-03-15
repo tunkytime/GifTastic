@@ -1,0 +1,18 @@
+/* GIFS */
+
+.gif {
+	margin: 0px 5px 5px 5px;
+}
+
+#get-more {
+	display: none;
+}
+
+#get-more:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#get-more span {
+	font-size: .8em;
+}
