@@ -16,43 +16,57 @@
 </head>
 
 <body>
+
+	<button id="show-favs" class="btn btn-success">Favorites</button>
+
 	<div class="container">
 	
-		<div class="row">
-			<!-- button container -->
-			<div class="col-md-8">
-				<div class="card mt-3">
-					<div class="card-header">
-					
-					<div class="float-left">Click the Buttons to Get Gifs!</div>
-					<br>
-					<div id="get-more"></div>
-					</div>
-					<div class="card-body">						
-						<div id="button-div"></div>
-					</div>
-				</div>
-			</div>
-			
-			<!-- add a topic -->
-			<div class="col-md-4">
-				<div class="card mt-3 mb-3">
-					<div class="card-header">New Topic</div>
-					<div class="card-body">
-						<form>
-							<div class="form-group">
-								<input type="text" class="form-control" id="new-item">
-							</div>
-							<button type="submit" class="btn btn-primary" id="add-item">Submit</button>
-						</form>
-					</div>
+		<!-- Hidden favorites div -->
+		<div id="hidden-favs">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="favorites"></div>
 				</div>
 			</div>
 		</div>
 		
-		<div class="row">
-			<div class="col-md-12">
-				<div id="giphy-div"></div>
+		<!-- Main gif display -->
+		<div id="main-gif-display">
+			<div class="row">
+				<!-- button container -->
+				<div class="col-md-8">
+					<div class="card border border-dark mt-3">
+						<div class="card-header bg-dark text-light">
+						<div class="float-left">Click below to get some GIFs!</div>
+						<br>
+						<div id="get-more"></div>
+						</div>
+						<div class="card-body">						
+							<div id="button-div"></div>
+						</div>
+					</div>
+				</div>
+				
+				<!-- add a topic -->
+				<div class="col-md-4">
+					<div class="card border border-dark mt-3 mb-3">
+						<div class="card-header bg-dark text-light">New Category</div>
+						<div class="card-body">
+							<form>
+								<div class="form-group">
+									<input type="text" placeholder="What are you looking for?" class="form-control" id="new-item">
+								</div>
+								<button type="submit" class="btn btn-info" id="add-item">Add</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-12">
+					<div id="giphy-div"></div>
+				</div>
 			</div>
 		</div>
 		
