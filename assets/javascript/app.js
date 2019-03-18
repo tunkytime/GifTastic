@@ -94,19 +94,22 @@
 			return false;
 		} else {
 			favorites.push(ref.data("url"));
+			
 			var gifDiv = $("<div>").addClass("float-left mt-2 mr-2 border rounded text-center");
-			var gif = $("<img>").attr("src", ref.data("url")).addClass("gif");
-			gif.attr("data-still", ref.data("still"));
-			gif.attr("data-animate", ref.data("animate"));
+			var gif = $("<img>").attr("src", ref.data("url")).addClass("gif").attr("data-still", ref.data("still")).attr("data-animate", ref.data("animate"));
+			
 			var rating = $("<p>").text(`Rating: ${ref.data("rating")}`);
 			var title = $(`<p class="m-1"><strong>${ref.data("title")}</strong></p>`);
 			var downloadBtn = (`<a href="${ref.data("url")}"><button class="btn btn-sm btn-secondary mb-2 mr-2 ml-2" target="_blank" download>Download</button></a>`);
-			var removeBtn = $("<button>").addClass("remove btn btn-sm btn-danger mb-2 mr-2 ml-2").text("Remove");
-			removeBtn.attr("data-url", ref.data("url"));
-			removeBtn.attr("data-rating", ref.data("rating"));
-			removeBtn.attr("data-title", ref.data("title"));
+			var removeBtn = $("<button>").addClass("remove btn btn-sm btn-danger mb-2 mr-2 ml-2").text("Remove").attr("data-url", ref.data("url")).attr("data-rating", ref.data("rating")).attr("data-title", ref.data("title"));
+			
 			gifDiv.append(title, gif, rating, downloadBtn, removeBtn);
+			
 			$("#favorites").append(gifDiv);
+				
+			localStorage.setItem("url", ref.data("url"));
+			localStorage.setItem("url-still", ref.data("url"));
+			localStorage.setItem("url-animate", ref.data("animate"));
 		};
 	};
 

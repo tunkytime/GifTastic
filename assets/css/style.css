@@ -23,7 +23,7 @@
 
 /* BUTTONS */
 #show-favs {
-	display: none;
+	display: block;
 }
 
 #show-favs,
